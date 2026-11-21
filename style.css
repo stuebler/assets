@@ -56,6 +56,9 @@ body.page-urlaub-neusiedler-see {
     background-image: url("https://moritz.stuebler.org/sport/urlaub-neusiedler-see/background.jpg");
 }
 
+body.page-4c {
+    background-image: url("https://4c.stuebler.org/background.png");
+}
 
 /* ========================================
    Hintergrund-Abdunklung
@@ -151,7 +154,7 @@ body::before {
     gap: 18px;
 }
 
-.logo img {
+.nav-logo img {
     height: 36px;
 }
 
@@ -171,6 +174,7 @@ body::before {
     transition:
         opacity 0.2s ease,
         text-shadow 0.2s ease;
+    /*filter: grayscale(1) brightness(0) invert(1);*/
 }
 
 .nav-item:hover {
@@ -178,6 +182,15 @@ body::before {
 
     text-shadow:
         0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* ========================================
+   Unicode-Emojis – Weiß
+   ======================================== */
+
+.nav-white-emoji {
+    color: white;
+    filter: grayscale(1) brightness(0) invert(1);
 }
 
 /* ========================================
@@ -225,24 +238,28 @@ body::before {
     position: absolute;
 
     top: 0;
-    left: 0;
-    right: 0;
+    left: 5%;
+    width: 90%;
 
-    height: 1px;
+    height: 2px;
 
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255, 255, 255, 0.85),
-            transparent
-        );
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 1),
+        transparent
+    );
 
-    opacity: 0.8;
+    opacity: 1;
+
+    box-shadow:
+        0 0 6px rgba(255, 255, 255, 0.8),
+        0 0 14px rgba(255, 255, 255, 0.4);
+
+    z-index: 5;
 
     pointer-events: none;
 }
-
 
 /* ========================================
    Liquid Glass – Reflexion
@@ -259,12 +276,12 @@ body::before {
     left: -10%;
 
     width: 120%;
-    height: 45%;
+    height: 50%;
 
     background:
         linear-gradient(
             180deg,
-            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.32),
             rgba(255, 255, 255, 0)
         );
 
@@ -272,20 +289,6 @@ body::before {
 
     pointer-events: none;
 }
-
-
-/* ========================================
-   Navigationsleiste – Liquid Glass
-   ======================================== */
-
-.navbar {
-    position: fixed;
-
-    overflow: hidden;
-
-    border-radius: 0 0 18px 18px;
-}
-
 
 /* ========================================
    Startseite – Grid
@@ -399,62 +402,6 @@ body::before {
 
     display: block;
 }
-
-
-/* ========================================
-   Privater Bereich
-   ======================================== */
-
-.private {
-    border: 1px solid rgba(255, 205, 55, 0.90);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(95, 70, 15, 0.48),
-            rgba(35, 30, 15, 0.28)
-        );
-
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.25),
-        0 0 18px rgba(255, 200, 40, 0.18),
-        inset 0 1px 0 rgba(255, 225, 120, 0.65),
-        inset 0 -1px 0 rgba(255, 190, 30, 0.15);
-}
-
-.private:hover {
-    background:
-        linear-gradient(
-            135deg,
-            rgba(115, 85, 18, 0.58),
-            rgba(40, 35, 15, 0.34)
-        );
-
-    border-color: rgba(255, 215, 70, 1);
-
-    box-shadow:
-        0 14px 40px rgba(0, 0, 0, 0.30),
-        0 0 30px rgba(255, 200, 40, 0.32),
-        inset 0 1px 0 rgba(255, 235, 150, 0.80),
-        inset 0 -1px 0 rgba(255, 190, 30, 0.20);
-}
-
-
-/* ========================================
-   Footer
-   ======================================== */
-
-footer {
-    text-align: center;
-
-    padding: 30px;
-
-    color: rgba(255, 255, 255, 0.95);
-
-    text-shadow:
-        0 2px 6px rgba(0, 0, 0, 0.8);
-}
-
 
 /* ========================================
    Große Inhaltskarten
@@ -620,103 +567,43 @@ footer {
         0 0 18px rgba(255, 255, 255, 0.08);
 }
 
-
 /* ========================================
-   YAML-Code
+   Wichtige Karte
    ======================================== */
 
-.code-header {
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    margin-top: 20px;
-
-    padding: 10px 15px;
+.importent {
+    border: 1px solid rgba(255, 205, 55, 0.90);
 
     background:
         linear-gradient(
             135deg,
-            rgba(20, 20, 20, 0.40),
-            rgba(20, 20, 20, 0.23)
+            rgba(95, 70, 15, 0.48),
+            rgba(35, 30, 15, 0.28)
         );
 
-    backdrop-filter:
-        blur(12px)
-        saturate(160%);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.25),
+        0 0 18px rgba(255, 200, 40, 0.18),
+        inset 0 1px 0 rgba(255, 225, 120, 0.65),
+        inset 0 -1px 0 rgba(255, 190, 30, 0.15);
+}
 
-    -webkit-backdrop-filter:
-        blur(12px)
-        saturate(160%);
+.importent:hover {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(115, 85, 18, 0.58),
+            rgba(40, 35, 15, 0.34)
+        );
 
-    color: white;
-
-    border: 1px solid rgba(255, 255, 255, 0.28);
-
-    border-radius: 14px 14px 0 0;
+    border-color: rgba(255, 215, 70, 1);
 
     box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+        0 14px 40px rgba(0, 0, 0, 0.30),
+        0 0 30px rgba(255, 200, 40, 0.32),
+        inset 0 1px 0 rgba(255, 235, 150, 0.80),
+        inset 0 -1px 0 rgba(255, 190, 30, 0.20);
 }
-
-.code-header span {
-    font-weight: bold;
-}
-
-.copy-button {
-    padding: 8px 14px;
-
-    background:
-        rgba(30, 30, 30, 0.35);
-
-    color: white;
-}
-
-.copy-button:hover {
-    background:
-        rgba(50, 50, 50, 0.45);
-}
-
-
-/* ========================================
-   Codeblock
-   ======================================== */
-
-.big-card pre {
-    margin: 0;
-
-    padding: 20px;
-
-    background:
-        rgba(0, 0, 0, 0.40);
-
-    backdrop-filter: blur(12px);
-
-    -webkit-backdrop-filter: blur(12px);
-
-    border: 1px solid rgba(255, 255, 255, 0.22);
-
-    border-top: none;
-
-    border-radius: 0 0 14px 14px;
-
-    overflow-x: auto;
-
-    line-height: 1.5;
-
-    font-family:
-        Consolas,
-        "Courier New",
-        monospace;
-
-    font-size: 14px;
-
-    color: rgba(255, 255, 255, 0.98);
-
-    text-shadow: none;
-}
-
 
 /* ========================================
    Aufzählungsblöcke
@@ -913,6 +800,116 @@ footer {
     opacity: 1;
 }
 
+/* ========================================
+   Code-Header
+   ======================================== */
+
+.code-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+    padding: 10px 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 20, 20, 0.40),
+            rgba(20, 20, 20, 0.23)
+        );
+
+    backdrop-filter:
+        blur(12px)
+        saturate(160%);
+
+    -webkit-backdrop-filter:
+        blur(12px)
+        saturate(160%);
+
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    border-radius: 14px 14px 0 0;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.code-header span {
+    font-weight: bold;
+}
+
+.copy-button {
+    padding: 8px 14px;
+
+    background:
+        rgba(30, 30, 30, 0.35);
+
+    color: white;
+}
+
+.copy-button:hover {
+    background:
+        rgba(50, 50, 50, 0.45);
+}
+
+
+/* ========================================
+   Codeblock
+   ======================================== */
+
+.big-card pre {
+    margin: 0;
+
+    padding: 20px;
+
+    background:
+        rgba(0, 0, 0, 0.40);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.22);
+
+    border-top: none;
+
+    border-radius: 0 0 14px 14px;
+
+    overflow-x: auto;
+
+    line-height: 1.5;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 14px;
+
+    color: rgba(255, 255, 255, 0.98);
+
+    text-shadow: none;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: rgba(255, 255, 255, 0.95);
+
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.8);
+}
 
 /* ========================================
    Fokus für Tastaturbedienung
