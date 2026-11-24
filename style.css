@@ -185,15 +185,6 @@ body::before {
 }
 
 /* ========================================
-   Unicode-Emojis – Weiß
-   ======================================== */
-
-.nav-white-emoji {
-    color: white;
-    filter: grayscale(1) brightness(0) invert(1);
-}
-
-/* ========================================
    Liquid Glass – Gemeinsame Basis
    ======================================== */
 
@@ -469,6 +460,22 @@ body::before {
         0 1px 4px rgba(0, 0, 0, 0.85);
 }
 
+/* ========================================
+   Weißer Text (hpt. für Emojis)
+   ======================================== */
+
+.white-text {
+    color: white;
+    filter: grayscale(1) brightness(0) invert(1);
+}
+/* ========================================
+   Schwarzer Text
+   ======================================== */
+
+.black-text {
+    color: black;
+    filter: grayscale(1) brightness(0);
+}
 
 /* ========================================
    Links in Inhaltskarten
