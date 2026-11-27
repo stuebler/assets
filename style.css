@@ -346,7 +346,7 @@ body::before {
 
     overflow: hidden;
   
-   text-decoration: none;
+    text-decoration: none;
 
     transition:
         transform 0.25s ease,
