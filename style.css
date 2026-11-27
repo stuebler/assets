@@ -1,3 +1,5 @@
+/* © 2026 Moritz Stübler – Alle Rechte vorbehalten. */
+
 /* ========================================
    Allgemeine Einstellungen
    ======================================== */
@@ -30,7 +32,7 @@ body {
    Allgemeine Links
    ======================================== */
 
-a:not(.nav-item):not(.button) {
+a:not(.nav-item):not(.button):not(.card) {
     color: white;
 
     font-weight: bold;
@@ -45,7 +47,7 @@ a:not(.nav-item):not(.button) {
         text-shadow 0.2s;
 }
 
-a:not(.nav-item):not(.button):hover {
+a:not(.nav-item):not(.button):not(.card):hover {
     text-decoration: underline;
 
     opacity: 0.85;
