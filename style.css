@@ -26,6 +26,33 @@ body {
     min-height: 100vh;
 }
 
+/* ========================================
+   Allgemeine Links
+   ======================================== */
+
+a:not(.nav-item):not(.button) {
+    color: white;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    text-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.8);
+
+    transition:
+        opacity 0.2s,
+        text-shadow 0.2s;
+}
+
+a:not(.nav-item):not(.button):hover {
+    text-decoration: underline;
+
+    opacity: 0.85;
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.5);
+}
 
 /* ========================================
    Seiten-Hintergründe
@@ -110,13 +137,6 @@ body::before {
 
     text-shadow:
         0 2px 6px rgba(0, 0, 0, 0.8);
-}
-
-.page-header a {
-    color: white;
-
-    font-weight: bold;
-    text-decoration: none;
 }
 
 
@@ -320,8 +340,6 @@ body::before {
 
     padding: 25px;
 
-    text-decoration: none;
-
     border-radius: 22px;
 
     overflow: hidden;
@@ -483,34 +501,6 @@ body::before {
 .black-text {
     color: black;
     filter: grayscale(1) brightness(0);
-}
-
-/* ========================================
-   Links in Inhaltskarten
-   ======================================== */
-
-.big-card p a {
-    color: white;
-
-    font-weight: bold;
-
-    text-decoration: none;
-
-    text-shadow:
-        0 1px 4px rgba(0, 0, 0, 0.8);
-
-    transition:
-        opacity 0.2s,
-        text-shadow 0.2s;
-}
-
-.big-card p a:hover {
-    text-decoration: underline;
-
-    opacity: 0.85;
-
-    text-shadow:
-        0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 
