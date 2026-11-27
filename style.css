@@ -154,6 +154,14 @@ body::before {
     gap: 18px;
 }
 
+.nav-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
 .nav-logo img {
     height: 36px;
 }
